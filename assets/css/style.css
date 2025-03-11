@@ -54,8 +54,19 @@ header > h1 {
     font-size: 0.9rem;
     font-weight: 500;
     color: black;
+    position: relative;
+    min-height: 30px;
+    cursor: pointer;
 }
 .column--highlight{
     background-color: #deebff;
     border: 2px solid #2482ff;
+}
+
+.edit-button {
+    display: none; /* Não exibir por padrão */
+}
+
+.card:hover .edit-button {
+    display: block; /* Exibe o botão apenas quando o card é hover */
 }
