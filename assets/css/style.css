@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@ main {
     padding: 30px;
     user-select: none;
 }
-header > span{
+header > span {
     font-size: 0.85rem;
     font-weight: 700;
     color: rgb(83, 83, 83);
@@ -33,17 +33,17 @@ header > h1 {
     height: 100dvh;
     border-radius: 10px;
 }
-.column--title{
+.column--title {
     font-size: 0.9rem;
     font-weight: 700;
     margin: 20px;
 }
-.column--cards{
+.column--cards {
     padding: 4px;
     height: 100%;
     border-radius: 5px;
 }
-.card{
+.card {
     width: 100%;
     min-height: 70px;
     background-color: white;
@@ -58,15 +58,35 @@ header > h1 {
     min-height: 30px;
     cursor: pointer;
 }
-.column--highlight{
+
+.edit--button--card {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.remove--button--card {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.column--highlight {
     background-color: #deebff;
     border: 2px solid #2482ff;
 }
 
-.edit-button {
-    display: none; /* Não exibir por padrão */
-}
-
-.card:hover .edit-button {
+.card:hover .edit--button--card {
     display: block; /* Exibe o botão apenas quando o card é hover */
+}
+.card:hover .remove--button--card {
+    display: block; 
 }

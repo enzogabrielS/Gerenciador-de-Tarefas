@@ -1,5 +1,8 @@
 const columns = document.querySelectorAll(".column--cards");
 let draggedCard;
+const removebtn = document.getElementById("removebutton");
+const editbtn = document.getElementById("editbutton");
+
 
 const dragStart = (event) => {
     draggedCard = event.target;
@@ -53,37 +56,18 @@ const createCard = ({ target }) => {
 }
 
 const editCard = () => {
-
+    
     card.contentEditable = "true";
     card.focus();
 }
 
-// Função para exibir botão de edição ao passar o mouse
 const showEditButton = (event) => {
     const card = event.target;
-    
-    // Evita criar múltiplos botões no mesmo card
-    if (card.querySelector(".edit-button")) return;
-    if (card.focus())return;
-    const editButton = document.createElement("button");
-    editButton.textContent = "✏️";
-    editButton.className = "edit-button";
-    
-    // Estiliza e posiciona o botão
-    editButton.style.position = "absolute";
-    editButton.style.top = "5px";
-    editButton.style.right = "5px";
-    editButton.style.background = "transparent";
-    editButton.style.border = "none";
-    editButton.style.cursor = "pointer";
-    editButton.style.fontSize = "16px";
-
-    editButton.addEventListener("click", () => editCard(card));
-
+    card.editbtn.style.display = "block";
+    removebtn.style.display = "block";
     card.appendChild(editButton);
 }
 
-// Função para remover o botão de edição quando o mouse sai do card
 const hideEditButton = (event) => {
     
     const card = event.target;
@@ -99,6 +83,4 @@ columns.forEach((column) => {
     column.addEventListener("dragleave", dragLeave);
     column.addEventListener("drop", dropEvt);
     column.addEventListener("dblclick", createCard);
-    column.addEventListener("dblclick", editCard);
-
 });
