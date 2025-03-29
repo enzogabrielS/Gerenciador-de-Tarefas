@@ -52,7 +52,6 @@ const createCard = ({ target }) => {
 
     function editcard (){
 
-
     }
 
 
