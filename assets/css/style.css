@@ -60,22 +60,24 @@ header > h1 {
 }
 
 .edit--button--card {
-    display: none;
+    display: flex;
     position: absolute;
+    top: 15%;
     bottom: 5px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
+    right: 34px;
+    width: 30px;
+    height: 28px;
     cursor: pointer;
 }
 
 .remove--button--card {
-    display: none;
+    display: flex;
     position: absolute;
+    top: 15%;
     bottom: 5px;
-    right: 28px;
-    width: 20px;
-    height: 20px;
+    right: 70px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
@@ -84,9 +86,11 @@ header > h1 {
     border: 2px solid #2482ff;
 }
 
-.card:hover .edit--button--card {
-    display: block; /* Exibe o botão apenas quando o card é hover */
+ .edit--button--card:hover {
+    background-color: #e6e6e6; 
+    border-radius: 5px;
 }
-.card:hover .remove--button--card {
-    display: block; 
-}
+.remove--button--card:hover {
+    background-color: #e6e6e6; 
+    border-radius: 5px;
+} 

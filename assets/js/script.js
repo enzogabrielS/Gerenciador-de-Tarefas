@@ -46,36 +46,15 @@ const createCard = ({ target }) => {
     });
 
     card.addEventListener("dragstart", dragStart);
-
-    // Adiciona eventos para mostrar/ocultar botão
-    card.addEventListener("mouseenter", showEditButton);
-    card.addEventListener("mouseleave", hideEditButton);
-
     target.append(card);
     card.focus();
 }
 
-const editCard = () => {
-    
-    card.contentEditable = "true";
-    card.focus();
-}
+    function editcard (){
 
-const showEditButton = (event) => {
-    const card = event.target;
-    card.editbtn.style.display = "block";
-    removebtn.style.display = "block";
-    card.appendChild(editButton);
-}
 
-const hideEditButton = (event) => {
-    
-    const card = event.target;
-    const editButton = card.querySelector(".edit-button");
-    if (editButton) {
-        editButton.remove();
     }
-}
+
 
 columns.forEach((column) => {
     column.addEventListener("dragover", dragOver);
